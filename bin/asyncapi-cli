@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const parser = require('asyncapi-parser');
+
+async function validate(content) {
+  try {
+    const doc = await parser.parse(content);
+    console.log(`--> passed '${doc.info().title()}'`);
+    console.log(JSON.stringify(doc, '', 2));
+  } catch (e) {
+      console.error(e);
+      process.exit(1);
+  } finally {
+      console.log('done.');
+  }  
+}
+
+if (process.argv.length !== 3) {
+  console.error('requires exactly one AsyncAPI input file as command argument')
+  process.exit(1);
+}
+
+const content = fs.readFileSync(process.argv[2]).toString();
+validate(content);

@@ -1,0 +1,16 @@
+{
+  "name": "asyncapi-cli",
+  "version": "1.0.0",
+  "description": "AsyncAPI CLI tool",
+  "bin": {
+    "asyncapi-cli": "./bin/asyncapi-cli"
+  },  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "z@goodapi.co",
+  "license": "MIT",
+  "dependencies": {
+    "asyncapi-parser": "^0.11.1"
+  }
+}

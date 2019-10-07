@@ -1,0 +1,118 @@
+$id: http://supermodel.io/starwars/core/Person
+$schema: http://json-schema.org/draft-07/schema#
+
+title: Person
+type: object
+description: >-
+  An individual person or character within the Star Wars universe.
+  
+  
+  **NOTE**: _This model is a modified version of https://swapi.co/ `Person` schema_
+
+properties:
+  starships:
+    description: Starships that this person has piloted
+    type: array
+    items:
+      $ref: Starship
+
+  eyeColor:
+    description: The eye color of this person.
+    type: string
+
+  name:
+    description: The name of this person.
+    type: string
+
+  mass:
+    description: The mass of this person in kilograms.
+    type: string
+
+  gender:
+    description: The gender of this person (if known).
+    type: string
+
+  films:
+    description: Films that this person has been in.
+    type: array
+    items:
+      $ref: Film
+
+  species:
+    description: Species that this person is.
+    type: array
+    items:
+      $ref: Species
+
+  height:
+    description: The height of this person in meters.
+    type: string
+
+  hairColor:
+    description: The hair color of this person.
+    type: string
+
+  vehicles:
+    description: Vehicles that this person has piloted
+    type: array
+    items:
+      $ref: Vehicle
+
+  skinColor:
+    description: The skin color of this person.
+    type: string
+
+  birthYear:
+    description: >-
+      The birth year of this person. BBY (Before the Battle of Yavin) or
+      ABY (After the Battle of Yavin).
+    type: string
+
+  homeworld:
+    description: The planet that this person was born on.
+    allOf:
+      - $ref: Planet # Relative model identifier, resolves to http://supermodel.io/starwars/core/Planet
+
+required:
+  - name
+  - height
+  - mass
+  - hairColor
+  - skinColor
+  - eyeColor
+  - birthYear
+  - gender
+  - homeworld
+  - films
+  - species
+  - vehicles
+  - starships
+
+examples:
+  - name: Luke Skywalker
+    height: '172'
+    mass: '77'
+    hairColor: blond
+    skinColor: fair
+    eyeColor: blue
+    birthYear: 19BBY
+    gender: male
+    homeworld: {}
+    films: []
+    species: []
+    vehicles: []
+    starships: []
+
+  - name: C-3PO
+    height: '167'
+    mass: '75'
+    hairColor: n/a
+    skinColor: gold
+    eyeColor: yellow
+    birthYear: 112BBY
+    gender: n/a
+    homeworld: {}
+    films: []
+    species: []
+    vehicles: []
+    starships: []

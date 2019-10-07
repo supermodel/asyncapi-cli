@@ -1,0 +1,25 @@
+asyncapi: 2.0.0
+info:
+  title: Hello world application
+  version: '0.1.0'
+channels:
+  hello:
+    publish:
+      message:
+        payload:
+          $ref: '#/components/schemas/Hello'
+
+components:
+  schemas:
+    Hello:
+      type: object
+      properties:
+        name:
+          message: string
+          examples:
+          - Hello World!
+
+    ExternalModel:
+      #$ref: http://supermodel.io/starwars/async/Film
+      $ref: supermodel/starwars/async/Film.yaml
+        
