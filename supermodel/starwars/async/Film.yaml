@@ -9,19 +9,16 @@ type: object
 
 properties:
   title:
-    type: string
+    $ref: http://supermodel.io/starwars/core/Film#/properties/title
 
-  # title:
-  #   $ref: http://supermodel.io/starwars/core/Film#/properties/title
+  director:
+     $ref: http://supermodel.io/starwars/core/Film#/properties/director
 
-  # director:
-  #    $ref: http://supermodel.io/starwars/core/Film#/properties/director
+  releaseDate:
+    $ref: http://supermodel.io/starwars/core/Film#/properties/releaseDate
 
-  # releaseDate:
-  #   $ref: http://supermodel.io/starwars/core/Film#/properties/releaseDate
+  episodeId:
+    $ref: http://supermodel.io/starwars/core/Film#/properties/episodeId
 
-  # episodeId:
-  #   $ref: http://supermodel.io/starwars/core/Film#/properties/episodeId
-
-  # producer:
-  #   $ref: http://supermodel.io/starwars/core/Film#/properties/producer
+  producer:
+    $ref: http://supermodel.io/starwars/core/Film#/properties/producer

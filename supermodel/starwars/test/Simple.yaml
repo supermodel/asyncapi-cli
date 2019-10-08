@@ -1,0 +1,12 @@
+$id: http://supermodel.io/starwars/test/Simple
+$schema: http://json-schema.org/draft-07/schema#
+
+title: Simple
+description: Simple model description
+type: object
+
+properties:
+  message:
+    type: string
+    examples:
+      - Hello World!
