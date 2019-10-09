@@ -7,7 +7,7 @@ channels:
     publish:
       message:
         payload:
-          $ref: '#/components/schemas/Hello'
+          $ref: '#/components/schemas/ExternalModel'
 
 components:
   schemas:
@@ -20,7 +20,4 @@ components:
           - Hello World!
 
     ExternalModel:
-      #$ref: http://supermodel.io/starwars/async/Film
-      #$ref: supermodel/starwars/async/Film.yaml
-      #$ref: supermodel/starwars/test/Simple.yaml  
-      $ref: 'https://supermodel.io/starwars/test/Simple'
+      $ref: supermodel/starwars/async/Film.yaml

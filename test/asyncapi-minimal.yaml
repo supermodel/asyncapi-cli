@@ -1,0 +1,11 @@
+asyncapi: 2.0.0
+info:
+  title: Starwars Application
+  version: '0.1.0'
+channels:
+  film:
+    publish:
+      message:
+        payload:
+          $ref: 'http://supermodel.io/starwars/async/Film'
+          
