@@ -20,4 +20,4 @@ components:
           - Hello World!
 
     ExternalModel:
-      $ref: supermodel/starwars/async/Film.yaml
+      $ref: 'http://supermodel.io/starwars/async/Film'
