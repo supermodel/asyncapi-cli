@@ -8,4 +8,3 @@ channels:
       message:
         payload:
           $ref: 'http://supermodel.io/starwars/async/Film'
-          

@@ -1,5 +1,5 @@
 {
   "yaml.schemas": {
-    "https://supermodel.io/formats/asyncapi/asyncapi": "/test/*.yaml"
+    "http://supermodel.io/formats/asyncapi/asyncapi@2": "/test/*.yaml"
   }
 }
